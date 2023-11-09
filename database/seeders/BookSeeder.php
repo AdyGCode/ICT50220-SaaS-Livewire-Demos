@@ -16,10 +16,10 @@ class BookSeeder extends Seeder
     public function run(): void
     {
 
-        $bookAuthors = ['OL1973725W','OL7168845A'];
+        $bookAuthors = ['OL1973725W','OL7497444A','OL7168845A','OL1608836A','OL5674374A'];
 
         foreach ($bookAuthors as $author) {
-            $maxCount = 10;
+            $maxCount = 50;
             $res = Http::withOptions([
                 'redirect.disable' => true
             ])->withHeaders([
@@ -33,13 +33,13 @@ class BookSeeder extends Seeder
 
             foreach ($res['docs'] as $doc) {
                 $workPath = $doc['key'];
-                $coverKey = $doc['cover_i'];
+                $coverKey = $doc['cover_i']??null;
                 $firstSentence = $doc['first_sentence'][0] ?? '';
 
                 DB::table('books')->insert([
                     'title' => $doc['title'],
                     'author' => $doc['author_name'][0],
-                    'year' => $doc['first_publish_year'],
+                    'year' => $doc['first_publish_year']??null,
                     'cover_url' => "http://covers.openlibrary.org/b/id/$coverKey-M.jpg",
                     'first_sentence' =>Str::limit($firstSentence, 192, $end="…"),
                     'url' => 'http://openlibrary.org/' . $doc['key'],
