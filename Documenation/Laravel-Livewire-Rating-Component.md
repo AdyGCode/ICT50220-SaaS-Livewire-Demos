@@ -96,7 +96,7 @@ We will also create the required migration for the `book_user` table which will 
 php artisan make:migration create_book_user_table
 ```
 
-Now we are able to add the table structuires to the `yyyy_mm-dd_hhmmss_create_books_table.php` and the  `yyyy_mm-dd_hhmmss_create_books_user_table.php`.
+Now we are able to add the table structures to the `yyyy_mm-dd_hhmmss_create_books_table.php` and the  `yyyy_mm-dd_hhmmss_create_books_user_table.php`.
 
 #### Books Table
 ```php

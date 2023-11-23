@@ -16,10 +16,23 @@ class BookSeeder extends Seeder
     public function run(): void
     {
 
-        $bookAuthors = ['OL1973725W','OL7497444A','OL7168845A','OL1608836A','OL5674374A'];
+        $bookAuthors = [
+            'asimov' => 'OL1973725W',
+            'stauffer' => 'OL7497444A',
+            'eddings' => 'OL7168845A',
+            'lengstorf' => 'OL6957755A',
+            'sarabia' => 'OL12311015A',
+            'edward' => 'OL7835100A',
+            'aleksendric' => 'OL10663314A',
+            'stark' => 'OL3288939A',
+            'engebreth' => 'OL10063593A',
+            'sande' => 'OL10313102A',
+            'frank' => 'OL10809736A',
+            'powers' => 'OL2752260A',
+        ];
 
         foreach ($bookAuthors as $author) {
-            $maxCount = 50;
+            $maxCount =10;
             $res = Http::withOptions([
                 'redirect.disable' => true
             ])->withHeaders([
@@ -29,23 +42,24 @@ class BookSeeder extends Seeder
             ])->get('http://openlibrary.org/search.json', [
                 'author' => $author,
                 'limit' => $maxCount,
+                'sort'=>'new'
             ]);
 
             foreach ($res['docs'] as $doc) {
                 $workPath = $doc['key'];
-                $coverKey = $doc['cover_i']??null;
+                $coverKey = $doc['cover_i'] ??null;
                 $firstSentence = $doc['first_sentence'][0] ?? '';
 
                 DB::table('books')->insert([
                     'title' => $doc['title'],
                     'author' => $doc['author_name'][0],
-                    'year' => $doc['first_publish_year']??null,
-                    'cover_url' => "http://covers.openlibrary.org/b/id/$coverKey-M.jpg",
-                    'first_sentence' =>Str::limit($firstSentence, 192, $end="…"),
+                    'year' => $doc['first_publish_year'] ?? null,
+                    'cover_url' => $coverKey==null?null: "http://covers.openlibrary.org/b/id/$coverKey-M.jpg",
+                    'first_sentence' => Str::limit($firstSentence, 192, $end = "…"),
                     'url' => 'http://openlibrary.org/' . $doc['key'],
                 ]);
 
-                if ($maxCount-- == 0) break;
+//                if ($maxCount-- == 0) break;
             }
         }
     }

@@ -12,9 +12,9 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css'])
+    @livewireStyles
 
-    <livewire:styles/>
 </head>
 <body class="font-sans antialiased">
 <div class="min-h-screen bg-gray-100">
@@ -29,12 +29,13 @@
         </header>
     @endif
 
+
     <!-- Page Content -->
     <main>
         {{ $slot }}
     </main>
 </div>
-<livewire:scripts/>
-
+@livewireScripts
+@vite(['resources/js/app.js'])
 </body>
 </html>
