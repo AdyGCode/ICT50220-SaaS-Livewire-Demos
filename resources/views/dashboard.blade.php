@@ -13,7 +13,7 @@
 
 
             <div class="items-center mt-6 lg:mt-0 overflow-visible">
-                <livewire:autocomplete-dropdown />
+                <livewire:autocomplete-dropdown/>
             </div>
         </div>
 
@@ -22,7 +22,8 @@
                 @foreach($books as $book)
                     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-3 mb-4 shadow-sm">
                         <a href="{{$book->url}}" target="_blank">
-                            <img src="{{ $book->cover_url??'No-Cover-Image.png' }}" class="h-80 rounded-lg" alt="{{ $book->title }}">
+                            <img src="{{ $book->cover_url??'No-Cover-Image.png' }}" class="h-80 rounded-lg"
+                                 alt="{{ $book->title }}">
                         </a>
                         <h2 class="text-xl py-3">
                             <a href="{{$book->url}}" target="_blank" class="text-black no-underline">
@@ -37,4 +38,5 @@
                 @endforeach
             </div>
         </div>
+    </div>
 </x-app-layout>
