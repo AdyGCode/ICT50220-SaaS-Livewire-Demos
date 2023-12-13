@@ -175,13 +175,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Star Ratings
+- [X] 5-Star Rating
 - [ ] Text Input
-- [ ] Number Input
+  - [ ] Number Input
 - [ ] Select Box
 - [ ] Autocomplete
 - [ ] Password Input
-  - [ ] complexity gague
+  - [ ] Complexity gauge
 - [ ] Checkbox
   - [ ] On/Off switch 
 - [ ] Radio Group 
