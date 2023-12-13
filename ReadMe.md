@@ -25,7 +25,7 @@
   </a>
 
   <p>
-    project_description
+   A Demonstration and Tutorials Project using Laravel Livewire
     <br />
     <a href="https://github.com/AdyGCode/ICT50220-SaaS-Livewire-Demos"><strong>Explore the docs »</strong></a>
     <br />
@@ -173,17 +173,19 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [X] 5-Star Rating
-- [ ] Text Input
-  - [ ] Number Input
-- [ ] Select Box
-- [ ] Autocomplete
-- [ ] Password Input
-  - [ ] Complexity gauge
-- [ ] Checkbox
-  - [ ] On/Off switch 
-- [ ] Radio Group 
-- [ ] Tag List
+The main roadmap will be in the issues in this Repository.
+
+- [X] 5-Star Rating #1
+- [ ] Text Input #2
+  - [ ] Number Input #3
+- [ ] Select Box #5
+- [ ] Autocomplete #4
+- [ ] Password Input #6
+  - [ ] Complexity gauge #7
+- [ ] Checkbox #8
+  - [ ] On/Off switch #9 
+- [ ] Radio Group #10
+- [ ] Tag List #11
 - [ ] ... 
 - [ ] ..
 
@@ -206,6 +208,38 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+
+<!-- Contributing in detail -->
+If you wish to contribute then:
+- fork the repository,
+- select an issue to resolve, and
+- create a branch for that issue.
+
+You will then create the component and a Markdown document that:
+- Explains in plain English terms how to create the component - step by step
+- Explains its use with a simple demo
+- Demonstrate its use in a sample static page
+- Provide access to this "static" page via the home/welcome dashboard
+
+> At this time, all Documentation is in the [Documentation](Documentation) folder.
+
+During this process and at all times, conventional commit messages (https://www.conventionalcommits.org/en/v1.0.0/) will be used.
+
+You may (it is preferable) create Pest (preferred) or Unit tests for the component and the code to verify it is performing as expected.
+It is preferable for this to happen as part of the traditional TDD, Write Test, fail test, Write code to pass test, Write test... loop until the feature (or fix) is completed.
+
+Once this is complete, you will:
+- Create a pull request for the solution linking it to the issue
+- Accept feedback from the project maintainers
+- Fix the feedback issues if they exist
+- Push changes as required...
+- Once the pull request is accepted you will:
+- Merge your pull request into the main branch
+- Resolve any merge conflicts that may exist
+- Delete the (local) branch to signify the feature is complete
+
+> **New Features and Fixes should be on separate issues and branches.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -232,11 +266,23 @@ Project Link: [https://github.com/AdyGCode/ICT50220-SaaS-Livewire-Demos](https:/
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## Acknowledgments and References
 
 * []()
 * []()
 * []()
+
+### References
+
+- https://docs.github.com/en/get-started/quickstart/github-flow
+- https://www.conventionalcommits.org/en/v1.0.0/
+- https://daily-dev-tips.com/posts/git-basics-conventional-commits/
+- https://dev.to/jordharr/an-introduction-to-conventional-commits-bd4
+- https://www.jondjones.com/architecture/continuous-intergration/source-control/adding-conventional-commits-to-git/
+- https://medium.com/neudesic-innovation/conventional-commits-a-better-way-78d6785c2e08
+- https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/
+- https://totaldebug.uk/posts/automated-release-with-semantic-release-and-commitizen/
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
