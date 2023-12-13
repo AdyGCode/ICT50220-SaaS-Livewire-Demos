@@ -17,13 +17,11 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/AdyGCode/ICT50220-SaaS-Livewire-Demos">
-    <img src="https://github.com/AdyGCode/ICT50220-SaaS-Livewire-Demos/public/images/Livewire-Demos-Logo@1x.png" alt="Logo" width="80" height="80">
+    <img src="public/images/Livewire-Demos-Logo@1x.png" alt="Logo" width="80" height="80">
   </a>
 
   <p>
