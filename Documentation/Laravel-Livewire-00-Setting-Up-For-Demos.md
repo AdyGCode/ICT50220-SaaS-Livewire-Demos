@@ -79,10 +79,12 @@ composer require laravel/breeze --dev
 ```
 
 We will now install the Breeze package, selecting the following options:
-- 
+- pest
+- dark
+- blade
 
 ```shell
-php artisan breeze:install
+php artisan breeze:install --pest --dark blade
 ```
 
 Finally, we perform the migrations to create the user table and other base tables.
